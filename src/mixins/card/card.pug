@@ -1,0 +1,10 @@
+mixin card(title, imgSrc, imgAlt, text, water-mark)
+  article.card 
+    h2.card__title= title 
+    img.card__image(src=imgSrc, alt=imgAlt)
+    p.card__water-mark= water-mark
+    div.card__content
+      p.card__paragraph= text      
+      button.button.card__button 
+        p.card__button-lable Like
+        div.heart 

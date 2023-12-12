@@ -1,0 +1,55 @@
+@import '../../fonts/fonts';
+@import '../../globals/variables';
+@import '../../mixins/text/text';
+
+.header {
+  block-size: 667px;
+  background: url(../../images/background2.png)  no-repeat center / cover;
+  box-shadow: 0 4px 4px $font-color-lite;
+  position: relative;
+  z-index: -2;
+
+    &:after {
+      content: "";
+      background: $header-background-gradient no-repeat center / cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: inherit;
+      display: block;
+      opacity: .25;
+      z-index: -1;
+    }
+
+    &__card {
+      background-color: #fff;
+      height: 327px;
+      margin-block-start: 100px;
+      text-align: center;
+    }
+
+    &__title {
+      padding-block-start: 120px;
+      display: block;
+      margin-inline: auto;
+      text-transform: uppercase;
+      text-align: center;
+      @include text($font-color-base, 
+                    $font-title-size, 
+                    $font-family-base, 
+                    $font-weight-base, 
+                    $line-height-base); 
+    }
+
+    &__subtitle {
+      margin-block-start: 20px;
+      margin-block-end: 25px;
+      text-align: center;
+      @include text($font-color-base, 
+                    $font-subtitle-size, 
+                    $font-family-base, 
+                    $font-weight-base, 
+                    $line-height-base); 
+    }
+}
