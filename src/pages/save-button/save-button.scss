@@ -3,8 +3,9 @@
 .save-button {
   height: 80px;
   width: 306px;
-  margin-inline: auto;
   border: 2px solid #000;
+  margin-block-end: 100px;
+  margin-inline: auto;
 
   &__icon {
     width: 28px;

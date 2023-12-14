@@ -1,8 +1,12 @@
-mixin card(title, imgSrc, imgAlt, text, water-mark)
+mixin card(title, imgSrc, imgAlt, text, waterMark)
   article.card 
     h2.card__title= title 
-    img.card__image(src=imgSrc, alt=imgAlt)
-    p.card__water-mark= water-mark
+    div.card__image-box
+      img.card__image(src=imgSrc alt=imgAlt)
+      if waterMark != 'care'
+        p.card__water-mark= '<' + waterMark + '>'
+      else
+        p.card__water-mark= waterMark
     div.card__content
       p.card__paragraph= text      
       button.button.card__button 
