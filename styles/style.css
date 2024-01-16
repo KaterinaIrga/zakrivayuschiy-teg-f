@@ -339,7 +339,7 @@
 
 .card__icon-button {
   margin-inline-end: 9px;
-  transition border 0.3s ease;
+  transition: border 0.3s ease;
 }
 
 .card__icon-button:focus-visible {
@@ -513,7 +513,6 @@
   font-weight: var(--font-weight-base);
   line-height: 90%;
   opacity: 1;
-  letter-spacing: 0%;
 }
 
 .dialog {

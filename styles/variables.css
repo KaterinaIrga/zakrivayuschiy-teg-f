@@ -8,7 +8,7 @@
   --max-block-width: 696px;
   --font-color-base: #000; 
   --background-color: #fff;
-  --background-image: url(../images/background2.png);
+  --background-image: url("../images/background2.png");
   --font-color-lite: color-mix(in lch var(--font-color-base), transparent 25%);
   --font-opacity: .6; 
   --font-title-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);

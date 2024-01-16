@@ -10,7 +10,7 @@
   --font-weight-bold: 785;
   --font-color-base: #00CC14; 
   --background-color: #000;
-  --background-image: url(../images/background.png);
+  --background-image: url("../images/background.png");
   --block-size: 219vw;
   --inline-size: 100vw;
   --min-screen-width: 375px;
@@ -37,7 +37,7 @@
   --font-weight-bold: 700;
   --font-color-base: #000; 
   --background-color: #fff;
-  --background-image: url(../images/background2.png);
+  --background-image: url("../images/background2.png");
   --block-size: 219vw;
   --inline-size: 100vw;
   --min-screen-width: 375px;
@@ -65,7 +65,7 @@
     --font-weight-bold: 785;
     --font-color-base: #00CC14; 
     --background-color: #000;
-    --background-image: url(../images/background.png);
+    --background-image: url("../images/background.png");
     --block-size: 219vw;
     --inline-size: 100vw;
     --min-screen-width: 375px;
@@ -97,7 +97,7 @@
     --font-weight-bold: 700;
     --font-color-base: #000; 
     --background-color: #fff;
-    --background-image: url(../images/background2.png);
+    --background-image: url("../images/background2.png");
     --block-size: 219vw;
     --inline-size: 100vw;
     --min-screen-width: 375px;
