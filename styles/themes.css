@@ -4,3 +4,118 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-dark {
+  --font-weight-base: 465;
+  --font-weight-bold: 785;
+  --font-color-base: #00CC14; 
+  --background-color: #000;
+  --background-image: url(../images/background.png);
+  --block-size: 219vw;
+  --inline-size: 100vw;
+  --min-screen-width: 375px;
+  --max-screen-width: 1440px;
+  --max-block-width: 696px;
+  --font-color-lite: color-mix(in lch var(--font-color-base), transparent 25%);
+  --font-opacity: .6; 
+  --font-title-size:  clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
+  --font-subtitle-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
+  --font-card-size: 18px;
+  --font-family-base: 'PressStart2P';
+  --font-family-card: 'Inter-Variable';
+  --line-height-base: 100%;
+  --line-height-min: 90%;
+  --line-height-card-title: 21px;
+  --line-height-max: 150%;
+  --header-background-gradient: linear-gradient( #007F0C, #004306 );
+  --color-svg: var(--background-color);
+  --color-svg-base: var(--font-color-base);
+}
+
+:root.theme-light {
+  --font-weight-base: 400;
+  --font-weight-bold: 700;
+  --font-color-base: #000; 
+  --background-color: #fff;
+  --background-image: url(../images/background2.png);
+  --block-size: 219vw;
+  --inline-size: 100vw;
+  --min-screen-width: 375px;
+  --max-screen-width: 1440px;
+  --max-block-width: 696px;
+  --font-color-lite: color-mix(in lch var(--font-color-base), transparent 25%);
+  --font-opacity: .6; 
+  --font-title-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
+  --font-subtitle-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
+  --font-card-size: 18px;
+  --font-family-base: 'PressStart2P';
+  --font-family-card: 'Inter-Variable';
+  --line-height-base: 100%;
+  --line-height-min: 90%;
+  --line-height-card-title: 21px;
+  --line-height-max: 150%;
+  --header-background-gradient: linear-gradient( #E7E7E7, #1A1A1A );
+  --color-svg: var(--background-color);
+  --color-svg-base: var(--font-color-base);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --font-weight-base: 465;
+    --font-weight-bold: 785;
+    --font-color-base: #00CC14; 
+    --background-color: #000;
+    --background-image: url(../images/background.png);
+    --block-size: 219vw;
+    --inline-size: 100vw;
+    --min-screen-width: 375px;
+    --max-screen-width: 1440px;
+    --max-block-width: 696px;
+    --font-color-lite: color-mix(in lch var(--font-color-base), transparent 25%);
+    --font-opacity: .6; 
+    --font-title-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
+    --font-subtitle-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
+    --font-card-size: 18px;
+    --font-family-base: 'PressStart2P';
+    --font-family-card: 'Inter-Variable';
+    --line-height-base: 100%;
+    --line-height-min: 90%;
+    --line-height-card-title: 21px;
+    --line-height-max: 150%;
+    --header-background-gradient: linear-gradient( #007F0C, #004306 );
+    --color-svg: var(--background-color);
+    --color-svg-base: var(--font-color-base);
+
+    fill: #00CC14; 
+    stroke:#00CC14;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --font-weight-base: 400;
+    --font-weight-bold: 700;
+    --font-color-base: #000; 
+    --background-color: #fff;
+    --background-image: url(../images/background2.png);
+    --block-size: 219vw;
+    --inline-size: 100vw;
+    --min-screen-width: 375px;
+    --max-screen-width: 1440px;
+    --max-block-width: 696px;
+    --font-color-lite: color-mix(in lch var(--font-color-base), transparent 25%);
+    --font-opacity: .6; 
+    --font-title-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
+    --font-subtitle-size: clamp(0.778rem, 0.602rem + 0.845vw, 1.278rem);
+    --font-card-size: 18px;
+    --font-family-base: 'PressStart2P';
+    --font-family-card: 'Inter-Variable';
+    --line-height-base: 100%;
+    --line-height-min: 90%;
+    --line-height-card-title: 21px;
+    --line-height-max: 150%;
+    --header-background-gradient: linear-gradient( #E7E7E7, #1A1A1A );
+    --color-svg: var(--background-color);
+    --color-svg-base: var(--font-color-base);
+  }
+}

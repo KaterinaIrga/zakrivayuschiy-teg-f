@@ -1,3 +1,5 @@
+@import '../../mixins/text/text';
+
 .button {
   background: none;
   border: none;
@@ -15,5 +17,13 @@
     &:focus-visible {
       outline: none;
       text-shadow:  0px 4px 4px $font-color-lite;
+    }
+
+    &__text {
+      @include text($font-color-base, 
+                    $font-subtitle-size, 
+                    $font-family-base, 
+                    $font-weight-base, 
+                    $line-height-min); 
     }
 }

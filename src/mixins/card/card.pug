@@ -9,6 +9,8 @@ mixin card(title, imgSrc, imgAlt, text, waterMark)
         p.card__water-mark= waterMark
     div.card__content
       p.card__paragraph= text      
-      button.button.card__button 
-        p.card__button-lable Like
-        div.heart 
+      button.button.card__icon-button
+        div.like-icon
+      button.button.card__like-button 
+        p.button__text Like
+      

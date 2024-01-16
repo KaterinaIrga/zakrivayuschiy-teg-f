@@ -1,14 +1,33 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
+  --block-size: 219vw;
+  --inline-size: 100vw;
+  --min-screen-width: 375px;
+  --max-screen-width: 1440px;
+  --max-block-width: 696px;
   --font-color-base: #000; 
-  --font-color-lite: color-mix(in lch var(--font-color-base), transpdrent 25%);
-  --font-title-size: 49px;
-  --font-subtitle-size: 14px;
+  --background-color: #fff;
+  --background-image: url(../images/background2.png);
+  --font-color-lite: color-mix(in lch var(--font-color-base), transparent 25%);
+  --font-opacity: .6; 
+  --font-title-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
+  --font-subtitle-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
   --font-card-size: 18px;
   --font-family-base: 'PressStart2P';
   --font-family-card: 'Inter-Variable';
   --font-weight-base: 400;
+  --font-weight-bold: 700;
   --line-height-base: 100%;
+  --line-height-min: 90%;
   --line-height-card-title: 21px;
+  --line-height-max: 150%;
+  --header-background-gradient: linear-gradient( #E7E7E7, #1A1A1A );
+  --color-svg: var(--background-color);
+  --color-svg-base: var(--font-color-base);
+  
+  
 }
+
+
+

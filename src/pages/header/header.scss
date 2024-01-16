@@ -21,6 +21,7 @@
       margin-inline: auto;
       text-transform: uppercase;
       text-align: center;
+      text-shadow: 0 4px 4px $font-color-lite;
       @include text($font-color-base, 
                     $font-title-size, 
                     $font-family-base, 

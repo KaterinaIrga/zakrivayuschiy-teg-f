@@ -82,16 +82,15 @@
       align-self: self-end;
     }
  */
-    &__button {
+   
+
+    &__like-button {
+      border: 2px solid #000;
+      box-shadow: 2px 2px $font-color-base;
       grid-column: 2;
       grid-row: 2;
       justify-self: self-end;      
       width: 169px;
       height: 38px;
-    }
-
-    &__button-lable {
-      border: 2px solid #000;
-      box-shadow: 2px 2px $font-color-base;
     }
 }
