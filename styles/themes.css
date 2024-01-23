@@ -34,6 +34,7 @@
   --header-background-gradient: linear-gradient( #007F0C, #004306 );
   --color-svg: var(--background-color);
   --color-svg-base: var(--font-color-base);
+  --opacity-aura: 0;
 }
 
 :root.theme-light {
@@ -65,6 +66,7 @@
   --header-background-gradient: linear-gradient( #E7E7E7, #1A1A1A );
   --color-svg: var(--background-color);
   --color-svg-base: var(--font-color-base);
+  --opacity-aura: 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -97,6 +99,7 @@
     --header-background-gradient: linear-gradient( #007F0C, #004306 );
     --color-svg: var(--background-color);
     --color-svg-base: var(--font-color-base);
+    --opacity-aura: 0;
 
     fill: #00CC14; 
     stroke:#00CC14;
@@ -133,5 +136,6 @@
     --header-background-gradient: linear-gradient( #E7E7E7, #1A1A1A );
     --color-svg: var(--background-color);
     --color-svg-base: var(--font-color-base);
+    --opacity-aura: 0;
   }
 }

@@ -20,12 +20,12 @@
 .like-icon__content {
   fill: var(--color-svg); 
   stroke: var(--color-svg); 
+  transition-delay: 0.03s;
 }
 
 .like-icon__center {
   fill: var(--color-svg);  
   stroke: var(--color-svg); 
-  transition-delay: 0.03s;
 }
 
 .like-icon__aura {
@@ -45,13 +45,6 @@
   transition-delay: 0.05s;
 }
 
-#heart:hover .like-icon__content {
-  fill: var(--color-svg-base);
-  stroke: var(--color-svg-base);
-  /* transition: all 0.3s linear 0.05s; */
-  transition-delay: 0.05s;
-}
-
 .button.card__icon-button:hover {
   opacity: 1;
 }
@@ -59,13 +52,6 @@
 #heart:hover .like-icon__center {
   fill: var(--color-svg-base);
   stroke: var(--color-svg-base);
-  transition: all 0.3s linear ;
-}
-
-.is-liked .like-icon__contour{
-  fill: var(--color-svg);  
-  stroke: var(--color-svg); 
-  transition-delay: 0.05s;
 }
 
 .is-liked .like-icon__content {
@@ -76,14 +62,7 @@
 
 #heart:active .like-icon__center {
   fill: red;
-  stroke: red;
-  
-}
-
-#heart:active .like-icon__contour {
-  fill: red;
-  stroke: red;
-  transition-delay: 0.05s;
+  stroke: red;  
 }
 
 #heart:active .like-icon__content {
@@ -92,27 +71,22 @@
   transition-delay: 0.05s;
 }
 
-
 .is-liked {
   --color-svg: red;
   --color-svg-base: red;
-}
-
-#heart:active  {
-  transform-origin: center;
-  transform: scale(1.2);
-  transition-delay: 0.03s;
-}
-
-.is-liked  .like-icon__aura {
-  opacity: 1;
+  --opacity-delay: 0.3s;
   transition: all 0.3s linear;
+  animation: changeSizeSVG 0.3s ease-in alternate 0.1s;
+  transform-origin: center;
 }
 
-#heart:active .like-icon__aura {
-  opacity: 1;
-  transition: all .3s ease-in .3s;
-  transition-delay: 0.05s;
+.heart__core {
+  width: 100%;
+  transform: scale(1);
+}
+
+.like-icon__aura {
+  animation: opacityAura var(--opacity-delay) ease-in alternate 0.3s;
 }
 
 .card__like-button:hover ,
@@ -148,6 +122,7 @@
 .save-button:focus,
 .dialog__button:focus {
   border: 2px solid var(--color-for-like);
+  box-shadow: 2px 2px var(--color-for-like);
   mix-blend-mode: difference;
 }
 
@@ -156,7 +131,6 @@
 .dialog__button:hover .button__text  {
   mix-blend-mode: difference;
 }
-
 
 .dialog__button:hover::after {
   width: 100%;
@@ -221,4 +195,29 @@
   100% {
     margin-inline: 4px 0;
   }
+}
+
+@keyframes changeUnderline {
+  
+  100% {
+    width: calc(100% - 17px);
+  }
+}
+
+@keyframes changeSizeSVG {
+  
+  100% {
+    transform:scale(1.5);
+  }
+}
+
+@keyframes opacityAura {  
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {   
+    opacity:  1;
+   }
 }

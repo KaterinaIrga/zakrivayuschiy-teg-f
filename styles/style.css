@@ -96,6 +96,10 @@
   text-decoration: none;
 }
 
+.header__title:focus-visible {
+  outline: none;
+}
+
 .header__subtitle,
 .header__title {
   color: var(--font-color-base);
@@ -338,7 +342,7 @@
 
 .like-icon {
   margin-inline: auto;  
-  transition: all 0.3s linear;
+  transition: all 0.3s ease;
 }
 
 .card__like-button {
@@ -348,7 +352,7 @@
   line-height: 38px;
   overflow: hidden;
   color: var( --font-color-base);  
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease;
   mix-blend-mode: difference;
 }
 

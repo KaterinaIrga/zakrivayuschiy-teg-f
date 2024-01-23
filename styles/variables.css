@@ -29,6 +29,7 @@
   --header-background-gradient: linear-gradient( #E7E7E7, #1A1A1A );
   --color-svg: var(--background-color);
   --color-svg-base: var(--font-color-base);
+  --opacity-aura: 0;
   
   
 }
