@@ -12,3 +12,213 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+.like-icon__contour {
+  fill: var(--color-svg-base);
+  stroke: var(--color-svg-base);
+}
+
+.like-icon__content {
+  fill: var(--color-svg); 
+  stroke: var(--color-svg); 
+}
+
+.like-icon__center {
+  fill: var(--color-svg);  
+  stroke: var(--color-svg); 
+  transition-delay: 0.03s;
+}
+
+.like-icon__aura {
+  fill: red;
+  stroke: red;
+  opacity: 0;
+  transition-delay: 0.3s;
+ }
+
+ #heart {
+  transition: all 0.3s linear 
+ }
+
+#heart:hover .like-icon__content{
+  fill: var(--color-svg-base);
+  stroke: var(--color-svg-base);
+  transition-delay: 0.05s;
+}
+
+#heart:hover .like-icon__content {
+  fill: var(--color-svg-base);
+  stroke: var(--color-svg-base);
+  /* transition: all 0.3s linear 0.05s; */
+  transition-delay: 0.05s;
+}
+
+.button.card__icon-button:hover {
+  opacity: 1;
+}
+
+#heart:hover .like-icon__center {
+  fill: var(--color-svg-base);
+  stroke: var(--color-svg-base);
+  transition: all 0.3s linear ;
+}
+
+.is-liked .like-icon__contour{
+  fill: var(--color-svg);  
+  stroke: var(--color-svg); 
+  transition-delay: 0.05s;
+}
+
+.is-liked .like-icon__content {
+  fill: red;
+  stroke: red;
+  transition-delay: 0.05s;
+}
+
+#heart:active .like-icon__center {
+  fill: red;
+  stroke: red;
+  
+}
+
+#heart:active .like-icon__contour {
+  fill: red;
+  stroke: red;
+  transition-delay: 0.05s;
+}
+
+#heart:active .like-icon__content {
+  fill: red;
+  stroke: red;
+  transition-delay: 0.05s;
+}
+
+
+.is-liked {
+  --color-svg: red;
+  --color-svg-base: red;
+}
+
+#heart:active  {
+  transform-origin: center;
+  transform: scale(1.2);
+  transition-delay: 0.03s;
+}
+
+.is-liked  .like-icon__aura {
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+
+#heart:active .like-icon__aura {
+  opacity: 1;
+  transition: all .3s ease-in .3s;
+  transition-delay: 0.05s;
+}
+
+.card__like-button:hover ,
+.save-button:hover,
+.dialog__button:hover {
+  box-shadow: 2px 2px var(--font-color-base);
+  transition: all .3s linear;
+  border: 2px solid var(--color-for-like);
+  mix-blend-mode: difference;
+}
+
+.card__like-button:focus-visible .button__text,
+.save-button:focus-visible .button__text,
+.dialog__button:focus-visible .button__text{
+  text-shadow: 0 4px 4px var(--color-for-like-lite);
+  mix-blend-mode: difference;
+}
+
+.card__icon-button:focus-visible {
+  transition: all .3s linear;
+  border: 2px solid var(--font-color-base);
+}
+
+.save-button:focus-visible,
+.dialog__button:focus-visible,
+.card__like-button:focus-visible {
+  transition: all .3s linear;
+  box-shadow: 2px 2px var(--color-for-like);
+  border: 2px solid var(--color-for-like);
+} 
+
+.card__like-button:focus,
+.save-button:focus,
+.dialog__button:focus {
+  border: 2px solid var(--color-for-like);
+  mix-blend-mode: difference;
+}
+
+.card__like-button:hover .button__text,
+.save-button:hover .button__text 
+.dialog__button:hover .button__text  {
+  mix-blend-mode: difference;
+}
+
+
+.dialog__button:hover::after {
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+  transform: translate(0, -70%);
+  transform-origin: left;
+}
+
+.card__like-button:hover::after,
+.save-button:hover::after {
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+  transform: translate(0, -100%);
+  transform-origin: left;
+}
+
+.card__like-button::after,
+.save-button::after,
+.dialog__button::after{
+  content: "";
+  display: block;
+  position: relative;
+  z-index:-1;
+  background-color: var(--color-for-like); 
+  width: 100%;
+  transition: all 0.5s ease-in-out;  
+}
+
+.dialog__button::after {
+  height: 38px;
+  transform: translate(-100%, -70%);
+}
+
+.card__like-button::after {
+  height: 38px;
+  transform: translate(-100%, -100%);
+}
+
+.save-button::after {
+  height: 80px;
+  transform: translate(-100%, -100%);
+}
+
+@media screen and (width > 696px) {
+  .save-button::after {
+    height: 55px;
+  }
+}
+
+.card__like-button:active,
+.save-button:active,
+.dialog__button:active {
+  border: 2px solid var(--color-for-like);
+  mix-blend-mode: difference;
+}
+
+@keyframes activeArrow {
+  0% {
+    margin-inline: 0 4px;
+  }
+
+  100% {
+    margin-inline: 4px 0;
+  }
+}
