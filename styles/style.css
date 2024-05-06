@@ -10,9 +10,13 @@
 
 .page::before {
   content: "";
-  background-image: repeating-linear-gradient(90deg,var(--gradient-color) 0 2px, transparent 2px 4px), 
-                    repeating-linear-gradient(var(--gradient-color) 0 2px, transparent 2px 4px),
-                    var(--header-background-gradient) ;  
+  background-image: repeating-linear-gradient(
+      90deg,
+      var(--gradient-color) 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(var(--gradient-color) 0 2px, transparent 2px 4px),
+    var(--header-background-gradient);
   background-size: cover;
   position: absolute;
   top: 0;
@@ -24,8 +28,8 @@
   outline: 1px solid var(--font-color-base);
 }
 
-@media screen and ( width > 696px ) {
-  .page::before {   
+@media screen and (width > 696px) {
+  .page::before {
     background-position: center, center;
     min-height: max(667px, 66.7vw);
     width: 100%;
@@ -53,8 +57,8 @@
 }
 
 .button:hover {
-  opacity: .6;
-  transition: all .3s ease;
+  opacity: 0.6;
+  transition: all 0.3s ease;
   text-shadow: 0 4px 4px var(--font-color-base-lite);
 }
 
@@ -64,9 +68,9 @@
 }
 
 .button:disabled {
-  opacity: .6;
+  opacity: 0.6;
   transition: all 0.3s ease;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .button__text {
@@ -74,8 +78,8 @@
   font-size: 14px;
   font-weight: var(--font-weight-base);
   line-height: 90%;
-  opacity: 1;  
-  color: var(--color-for-like); 
+  opacity: 1;
+  color: var(--color-for-like);
   mix-blend-mode: difference;
 }
 
@@ -117,7 +121,7 @@
 }
 
 .theme-menu {
-  gap: 25px
+  gap: 25px;
 }
 
 .theme-menu,
@@ -149,18 +153,18 @@
 
 .button[disabled].theme-menu__button::before {
   color: var(--font-color-base);
-  animation: activeArrow .5s ease-in-out infinite alternate;
+  animation: activeArrow 0.5s ease-in-out infinite alternate;
 }
 
 .theme-menu__button:hover::before,
 .theme-menu__button:focus-visible::before {
-  text-shadow:none;
+  text-shadow: none;
   background-color: transparent;
 }
 
 .theme-menu__button::after {
   content: "";
-  background-color:var(--font-color-base);
+  background-color: var(--font-color-base);
   display: block;
   height: 2px;
   width: 0;
@@ -168,12 +172,12 @@
 
 .theme-menu__button:focus-visible::after {
   margin-inline-start: 17px;
-  opacity: .6;
-  animation: changeUnderline .5s ease-in-out forwards;
+  opacity: 0.6;
+  animation: changeUnderline 0.5s ease-in-out forwards;
 }
 
 .theme-menu__button:focus-visible {
-   opacity: .6;
+  opacity: 0.6;
 }
 
 .theme-menu__item {
@@ -189,7 +193,7 @@
 .main__card-list {
   display: flex;
   flex-direction: column;
-  gap: 50px
+  gap: 50px;
 }
 
 .card {
@@ -237,14 +241,14 @@
 }
 
 .card__image {
-  object-fit: cover; 
-  object-position: center; 
+  object-fit: cover;
+  object-position: center;
   width: 100%;
   height: 100%;
 }
 
 .card__image_filter_blur {
-  filter:blur(5px);
+  filter: blur(5px);
 }
 
 .card__image_filter_brightness {
@@ -256,7 +260,7 @@
 }
 
 .card__image_filter_grayscale {
-  filter: grayscale(.7);
+  filter: grayscale(0.7);
 }
 
 .card__image_filter_saturate {
@@ -283,17 +287,19 @@
   inset-block-start: 25px;
   inset-inline-end: 12px;
   line-height: 100%;
-  opacity: .5;
+  opacity: 0.5;
   background-blend-mode: hard-light;
   position: absolute;
-  text-shadow: 1px 0 1px var(--background-color), 
-               0 1px 1px var(--background-color), 
-               -1px 0 1px var(--background-color), 
-               0 -1px 1px var(--background-color);
+  text-shadow: 1px 0 1px var(--background-color),
+    0 1px 1px var(--background-color), -1px 0 1px var(--background-color),
+    0 -1px 1px var(--background-color);
   text-transform: uppercase;
 }
 
-@supports ((text-stroke: 1px var(--background-color)) or (-webkit-text-stroke: 1px var(--background-color))) {
+@supports (
+  (text-stroke: 1px var(--background-color)) or
+    (-webkit-text-stroke: 1px var(--background-color))
+) {
   .card__water-mark {
     -webkit-text-stroke: 1px var(--background-color);
     text-stroke: 1px var(--background-color);
@@ -337,46 +343,46 @@
   transition: border 0.3s ease;
   box-sizing: border-box;
   height: 38px;
-  width: 38px; 
+  width: 38px;
 }
 
 .like-icon {
-  margin-inline: auto;  
+  margin-inline: auto;
   transition: all 0.3s ease;
 }
 
 .card__like-button {
   border: 2px solid var(--color-for-like);
   height: 38px;
-  width: 130px;  
+  width: 130px;
   line-height: 38px;
   overflow: hidden;
-  color: var( --font-color-base);  
+  color: var(--font-color-base);
   transition: all 0.3s ease;
   mix-blend-mode: difference;
 }
 
-.save-button {    
+.save-button {
   overflow: hidden;
   border: 2px solid var(--color-for-like);
   height: 80px;
   margin-block-end: 100px;
   margin-inline: auto;
-  width: 306px;  
-  color: var( --font-color-base);  
+  width: 306px;
+  color: var(--font-color-base);
   transition: all 0.5s ease-in-out;
   mix-blend-mode: difference;
 }
 
 @media screen and (width > 696px) {
-  .save-button {    
+  .save-button {
     height: 55px;
     width: 335px;
   }
 }
 
 .save-button__content {
-  display: flex;  
+  display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -394,18 +400,18 @@
 .save-button__icon {
   height: 28px;
   margin-block-end: 8px;
-  width: 28px;  
+  width: 28px;
   fill: var(--color-for-like);
   stroke: var(--color-for-like);
   transition: all 0.5s ease-in-out;
 }
 
-@media screen and ( width > 696px) {
+@media screen and (width > 696px) {
   .save-button__icon {
-    margin-inline: 19px 8px; 
+    margin-inline: 19px 8px;
     margin-block: auto;
     height: 21px;
-    width: 21px; 
+    width: 21px;
   }
 }
 
@@ -426,7 +432,7 @@
   width: 341px;
 }
 
-@media screen and ( width > 696px ) {
+@media screen and (width > 696px) {
   .dialog {
     width: 357px;
   }
@@ -434,24 +440,24 @@
 
 .dialog:not([open]) {
   opacity: 0;
-  pointer-events: none
+  pointer-events: none;
 }
 
 .dialog::backdrop {
   background-color: #000;
-  opacity: .75;
+  opacity: 0.75;
 }
 
 .dialog__content {
   column-gap: 20px;
   gap: 30px;
-  display: grid;  
+  display: grid;
   grid-template-columns: 59px 1fr;
   margin-block: 30px;
   margin-inline: 42px;
 }
 
-@media screen and ( width > 696px ) {
+@media screen and (width > 696px) {
   .dialog__content {
     margin-inline: 30px;
   }
@@ -468,12 +474,12 @@
 
 .dialog__title {
   grid-column: 2;
-  grid-row: 1;  
+  grid-row: 1;
   color: var(--font-color-base);
 }
 
 .dialog__button,
-.dialog__title {  
+.dialog__title {
   font-family: var(--font-family-base);
   font-size: 14px;
   font-weight: var(--font-weight-base);
