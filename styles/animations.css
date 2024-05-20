@@ -35,13 +35,21 @@
   transition-delay: 0.3s;
  }
 
- #heart {
-  transition: all 0.3s linear 
- }
+ /* #heart {
+  transition: all 0.3s linear;
+  width: 39px;
+  height: 36px;
+ } */
 
-#heart:hover .like-icon__content{
+ .like-icon:hover .like-icon__content{
   fill: var(--color-svg-base);
   stroke: var(--color-svg-base);
+  transition-delay: 0.05s;
+}
+
+.save-button #floppy {
+  fill: var(--color-svg);
+  stroke: var(--color-svg);
   transition-delay: 0.05s;
 }
 
@@ -49,7 +57,7 @@
   opacity: 1;
 }
 
-#heart:hover .like-icon__center {
+.like-icon:hover .like-icon__center {
   fill: var(--color-svg-base);
   stroke: var(--color-svg-base);
 }
@@ -92,10 +100,24 @@
 .card__like-button:hover ,
 .save-button:hover,
 .dialog__button:hover {
-  box-shadow: 2px 2px var(--font-color-base);
+  opacity: 1;
+   box-shadow: 2px 2px var(--font-color-base); 
   transition: all .3s linear;
   border: 2px solid var(--color-for-like);
   mix-blend-mode: difference;
+}
+
+.card__like-button:focus,
+.save-button:focus,
+.dialog__button:focus {
+  outline: none;
+  border: 2px solid var(--color-for-like);
+  box-shadow: 2px 2px var(--color-for-like);
+  mix-blend-mode: difference;
+}
+
+.card__icon-button:focus {
+  outline: none;
 }
 
 .card__like-button:focus-visible .button__text,
@@ -118,13 +140,7 @@
   border: 2px solid var(--color-for-like);
 } 
 
-.card__like-button:focus,
-.save-button:focus,
-.dialog__button:focus {
-  border: 2px solid var(--color-for-like);
-  box-shadow: 2px 2px var(--color-for-like);
-  mix-blend-mode: difference;
-}
+
 
 .card__like-button:hover .button__text,
 .save-button:hover .button__text 
@@ -200,7 +216,7 @@
 @keyframes changeUnderline {
   
   100% {
-    width: calc(100% - 17px);
+    width: calc(100% - 34px);
   }
 }
 

@@ -14,13 +14,11 @@
   --background-image: url("../images/background2.png");
   --font-color-lite: color-mix(in lch var(--font-color-base), transparent 25%);
   --font-opacity: .6; 
-  --font-title-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
+  --font-title-size:  clamp(49px, 10vw, 65px);
   --font-subtitle-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
   --font-card-size: 18px;
   --font-family-base: 'PressStart2P', 'fantasy', sans-serif;
   --font-family-card: 'Inter-Variable', 'Arial', sans-serif;
-  --font-weight-base: 400;
-  --font-weight-bold: 700;
   --line-height-base: 100%;
   --line-height-min: 90%;
   --line-height-card-title: 21px;
@@ -30,8 +28,11 @@
   --color-svg: var(--background-color);
   --color-svg-base: var(--font-color-base);
   --opacity-aura: 0;
-  
-  
+  --font-weight-bold: 785;
+  --font-weight-base: 465;
+
+  fill: #00CC14; 
+  stroke:#00CC14;
 }
 
 

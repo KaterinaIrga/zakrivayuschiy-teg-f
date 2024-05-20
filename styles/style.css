@@ -4,40 +4,32 @@
   margin-inline: auto;
   max-width: 696px;
   min-width: 375px;
-  background-color: var(--background-color);
+  width: clamp(375px, 100vw * 10, 696px);
+  /* background-color: var(--background-color); */
   font-size: 18px;
+    background-image: repeating-linear-gradient( 
+      90deg, 
+      var(--gradient-color) 0 2px, 
+      transparent 2px 4px 
+    ), 
+    repeating-linear-gradient(var(--gradient-color) 0 2px, transparent 2px 4px), 
+    var(--header-background-gradient); 
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
 }
 
-.page::before {
-  content: "";
-  background-image: repeating-linear-gradient(
-      90deg,
-      var(--gradient-color) 0 2px,
-      transparent 2px 4px
-    ),
-    repeating-linear-gradient(var(--gradient-color) 0 2px, transparent 2px 4px),
-    var(--header-background-gradient);
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: max(100%, 375px);
-  min-height: 667px;
-  z-index: -1;
-  box-shadow: 0 4px 4px var(--font-color-base-lite);
-  outline: 1px solid var(--font-color-base);
-}
 
-@media screen and (width > 696px) {
-  .page::before {
-    background-position: center, center;
-    min-height: max(667px, 66.7vw);
-    width: 100%;
+
+ @media screen and (width > 696px) {
+  .page{
+    background-size: 100% 66.6vh;
   }
 }
-
+ 
 .button {
-  background: none;
+  background: transparent;
   padding: 0;
   font-family: var(--font-family-base);
   font-size: 14px;
@@ -141,6 +133,7 @@
   line-height: 100%;
   opacity: 1;
   text-align: start;
+  margin-inline-end: auto;
   text-transform: uppercase;
   transition: all 0.3s linear;
 }
@@ -171,7 +164,7 @@
 }
 
 .theme-menu__button:focus-visible::after {
-  margin-inline-start: 17px;
+  margin-inline-start: 34px;
   opacity: 0.6;
   animation: changeUnderline 0.5s ease-in-out forwards;
 }
@@ -205,11 +198,12 @@
   inline-size: 100%;
   position: relative;
   align-items: center;
+  box-sizing: content-box;
 }
 
 @media screen and (width > 696px) {
   .card {
-    grid-template-rows: 33px 696px minmax(100px, 1fr);
+    grid-template-rows: 35px 696px minmax(100px, 1fr);
     inline-size: 696px;
   }
 }
@@ -218,14 +212,15 @@
   color: var(--font-color-base);
   font-family: var(--font-family-card);
   font-size: var(--font-card-size);
-  font-variation-settings: "wght" 785;
+  font-variation-settings: "wght" var(--font-weight-bold);
   font-weight: 700;
+
   grid-column: 1/-1;
   grid-row: 1;
   line-height: 20px;
   opacity: 1;
   margin-inline: 10px;
-  margin-block: 6px;
+  margin-block-end: 4px;
 }
 
 .card__image-box {
@@ -238,6 +233,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  box-sizing: content-box;
 }
 
 .card__image {
@@ -284,8 +280,8 @@
   font-family: var(--font-family-base);
   font-size: 14px;
   font-weight: var(--font-weight-base);
-  inset-block-start: 25px;
-  inset-inline-end: 12px;
+  inset-block-start: 22px;
+  inset-inline-end: 27px;
   line-height: 100%;
   opacity: 0.5;
   background-blend-mode: hard-light;
@@ -293,7 +289,7 @@
   text-shadow: 1px 0 1px var(--background-color),
     0 1px 1px var(--background-color), -1px 0 1px var(--background-color),
     0 -1px 1px var(--background-color);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 @supports (
@@ -311,29 +307,34 @@
   display: grid;
   grid-column: 1/-1;
   grid-row: 3;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 25px;
+  grid-template-columns: 1fr 38px;
+  padding: 25px 26px 25px 23px;
   row-gap: 25px;
+}
+
+.card__text-box {
+  grid-column: 1/-1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
 }
 
 .card__paragraph {
   color: var(--font-color-base);
   font-family: var(--font-family-card);
-  font-variation-settings: "wght" 400;
+  font-variation-settings: "wght" var(--font-weight-base);
   font-size: var(--font-card-size);
   font-weight: var(--font-weight-base);
-  grid-column: 1/-1;
-  grid-row: 1;
   line-height: 21px;
   opacity: 1;
-  padding-block-end: 27px;
+  /*  padding-block-end: 27px; */
 }
 
 .card__button-container {
   grid-column: 2;
   grid-row: 2;
   display: flex;
-  flex-direction: row-reverse;
   justify-self: self-end;
   align-self: center;
 }
@@ -341,14 +342,15 @@
 .card__icon-button {
   margin-inline-end: 7px;
   transition: border 0.3s ease;
+  border: 2px solid transparent;
   box-sizing: border-box;
   height: 38px;
   width: 38px;
 }
 
 .like-icon {
-  margin-inline: auto;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 .card__like-button {
@@ -366,43 +368,49 @@
   overflow: hidden;
   border: 2px solid var(--color-for-like);
   height: 80px;
+
   margin-block-end: 100px;
   margin-inline: auto;
   width: 306px;
   color: var(--font-color-base);
   transition: all 0.5s ease-in-out;
-  mix-blend-mode: difference;
+   mix-blend-mode: difference; 
 }
 
 @media screen and (width > 696px) {
   .save-button {
     height: 55px;
     width: 335px;
+    /* flex-direction: row;
+    justify-content: start; */
   }
 }
 
-.save-button__content {
-  display: flex;
+ .save-button__content {
+   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  gap: 0;
+  gap: 0; 
   height: 100%;
-}
+} 
 
-@media screen and (width > 696px) {
+ @media screen and (width > 696px) {
   .save-button__content {
     flex-direction: row;
     justify-content: start;
-  }
-}
+  } 
+} 
 
 .save-button__icon {
   height: 28px;
   margin-block-end: 8px;
   width: 28px;
+  color: var(--color-for-like);
   fill: var(--color-for-like);
   stroke: var(--color-for-like);
+  
+  mix-blend-mode: difference;
   transition: all 0.5s ease-in-out;
 }
 
@@ -415,11 +423,7 @@
   }
 }
 
-#floppy {
-  fill: var(--color-svg-base);
-}
-
-.dialog {
+.dialog[open] {
   background-color: var(--background-color);
   border-width: 2px;
   box-sizing: border-box;
@@ -438,10 +442,6 @@
   }
 }
 
-.dialog:not([open]) {
-  opacity: 0;
-  pointer-events: none;
-}
 
 .dialog::backdrop {
   background-color: #000;
@@ -470,6 +470,8 @@
   height: 39px;
   margin-inline: auto;
   width: 39px;
+  fill: var(--color-svg-base);
+  stroke: var(--color-svg-base);
 }
 
 .dialog__title {
@@ -497,7 +499,7 @@
   mix-blend-mode: difference;
 }
 
-.dialog__button-content .button__text {
+.dialog__button .button__text {
   display: block;
   padding-top: 12px;
 }
@@ -505,4 +507,8 @@
 .dialog__form {
   grid-column: 1/-1;
   grid-row: 2;
+}
+
+.footer {
+  background-color: var(--background-color);
 }
