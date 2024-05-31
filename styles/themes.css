@@ -15,8 +15,10 @@
   --color-for-like-lite: #00cc1440;
   --gradient-color: #000;
   --header-background-gradient: linear-gradient(#007f0c, #004306);
-  --header-btn-margin: 4px;
-  --header-btn-disable-margin: 24px;
+  --header-btn-left: 0;
+  --header-btn-right: 6px;
+  --header-btn-disable-right: 0px;
+  --header-btn-disable-left: -6px;
   --water-mark-block-start: 20px;
   fill: #00cc14;
   stroke: #00cc14;
@@ -32,6 +34,10 @@
   --color-for-like-lite: #ffffff40;
   --gradient-color: #d3d3d3;
   --header-background-gradient: linear-gradient(#e7e7e7, #1a1a1a);
+  --header-btn-left: 0;
+  --header-btn-right: 0;
+  --header-btn-disable-right: 10px;
+  --header-btn-disable-left: -4px;
   fill: #000;
   stroke: #000;
 }
@@ -47,8 +53,10 @@
     --color-for-like-lite: #00cc1440;
     --gradient-color: #000;
     --header-background-gradient: linear-gradient(#007f0c, #004306);
-    --header-btn-margin: 4px;
-    --header-btn-disable-margin: 24px;
+    --header-btn-left: 4px;
+    --header-btn-right: 12px;
+    --header-btn-disable-right: 20px;
+    --header-btn-disable-left: 0px;
     --water-mark-block-start: 20px;
     fill: #00cc14;
     stroke: #00cc14;

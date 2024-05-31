@@ -25,6 +25,7 @@
     --card-elem-width: calc(
       clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem) - 4px
     );
+
   }
 }
 
@@ -149,22 +150,20 @@
   opacity: 1;
   text-transform: uppercase;
   transition: all 0.3s ease;
-  margin-inline: var(--header-btn-margin) 0;
+   margin-inline: var(--header-btn-left) var(--header-btn-right); 
 }
 
 .theme-menu__button[disabled] {
-  margin-inline: 0 var(--header-btn-disable-margin);
+   margin-inline: var(--header-btn-disable-left) var(--header-btn-disable-right); 
 }
 
 .theme-menu__button::before {
   content: "▶";
   color: transparent;
-  /*   margin-inline-start: -6px; */
 }
 
 .button[disabled].theme-menu__button::before {
   color: var(--font-color-base);
-  /*   margin-inline: 8px 4px; */
   animation: activeArrow 0.5s ease-in-out infinite alternate;
 }
 
@@ -510,6 +509,8 @@
   margin-inline: auto;
   width: 39px;
   color: var(--color-svg-base);
+  fill:var(--color-svg-base);
+  stroke: var(--color-svg-base);
 }
 
 .dialog__title {

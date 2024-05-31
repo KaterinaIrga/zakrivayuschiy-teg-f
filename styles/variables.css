@@ -24,8 +24,10 @@
   --line-height-max: 150%;
   --gradient-color: #d3d3d3;
   --header-background-gradient: linear-gradient(#e7e7e7, #1a1a1a);
-  --header-btn-margin: 8px;
-  --header-btn-disable-margin: 16px;
+  --header-btn-left: 4px;
+  --header-btn-right: 12px;
+  --header-btn-disable-right: 0;
+  --header-btn-disable-left: 0;
   --color-svg: var(--background-color);
   --color-svg-base: var(--font-color-base);
   --opacity-aura: 0;
